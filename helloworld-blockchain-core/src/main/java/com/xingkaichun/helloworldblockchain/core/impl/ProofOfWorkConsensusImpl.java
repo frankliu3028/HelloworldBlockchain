@@ -39,7 +39,7 @@ public class ProofOfWorkConsensusImpl extends Consensus {
 
     /**
      * 计算目标区块的挖矿难度
-     *
+     * 为什么要设置挖矿难度？目的是控制出块的时间。
      * 挖矿的难度在一个挖矿周期内是不变的，而每当一个新的挖矿周期开始时，就需要重新计算新的周期的挖矿难度。
      * 每GlobalSetting.IncentiveConstant.INTERVAL_BLOCK_COUNT个区块为一个挖矿周期。
      * 计算第X周期的难度需要参考第(X-1)周期的耗时。
